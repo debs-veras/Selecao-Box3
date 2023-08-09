@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atualizar contato</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="../assets/css/base/base.css">
+  <link rel="stylesheet" href="../assets/css/componentes/cabecalho.css">
+  <link rel="stylesheet" href="../assets/css/componentes/cartao.css">
+  <link rel="stylesheet" href="../assets/css/cadastra_contato.css">
+  <link rel="stylesheet" href="../assets/css/componentes/inputs.css">
+  <link rel="stylesheet" href="../assets/css/componentes/botao.css">
+  <link rel="stylesheet" href="../assets/css/componentes/input-mensagem-erro.css">
+</head>
+<body>
+  <header class="cabecalho container">
+    <img src="../assets/img/logo.png" alt="Logotipo Box3" class="cabecalho__logo">
+    <nav>
+      <ul class="cabecalho__lista-navegacao">
+        <li class="cabecalho__link"><a href="#">Dashboard</a></li>
+        <li class="cabecalho__link"><a href="lista_contatos.html">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container flex flex--centro flex--coluna">
+    <section class="cartao cadastro">
+      <h1 class="cartao__titulo">Edição</h1>
+      <form action="#" class="flex flex--coluna" data-form>
+         <div class="input-container">
+            <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required data-nome>
+            <label class="input-label" for="nome">Nome</label>
+            <span class="error"></span>
+          </div>
+      
+          <div class="input-container">
+            <input name="email" id="email" class="input" type="email" placeholder="E-mail" required data-email>
+            <label class="input-label" for="email">E-mail</label>
+            <span class="error"></span>
+          </div>
+    
+          <div class="input-container">
+            <input name="telefone" id="telefone" class="input" type="tel" placeholder="Telefone" required data-telefone oninput="maskFunc(this)">
+            <label class="input-label" for="telefone">Telefone</label>
+            <span class="error"></span>
+          </div>
+      
+          <div class="input-container">
+            <input name="data_nas" id="date_nas" class="input" type="date" placeholder="Data de nascimento" required data-data_nas>
+            <label class="input-label" for="date_nas">Data de nascimento</label>
+            <span class="error"></span>
+          </div>
+          <button type="submit"class="botao">
+            Editar contato
+          </button>
+      </form>
+    </section>
+  </main>
+</body>
+
+<script type="text/javascript" src="../assets/js/validacao.js">
+</script>
+<script type="module" src="../controller/atualizaContato-controller.js"></script>
+
+</html>
